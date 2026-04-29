@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { ScrollTrigger } from './lib/gsap'
 import CustomCursor from './components/ui/CustomCursor'
 import ScrollProgress from './components/ui/ScrollProgress'
+import ProjectModal from './components/ui/ProjectModal'
 import Navbar from './components/sections/Navbar'
 import Hero from './components/sections/Hero'
 import LogoTicker from './components/sections/LogoTicker'
@@ -16,6 +17,7 @@ import Footer from './components/sections/Footer'
 
 export default function App() {
   const [resetKey, setResetKey] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
   const hasScrolledAway = useRef(false)
 
   const resetAnimations = useCallback(() => {
@@ -49,7 +51,8 @@ export default function App() {
     <>
       <CustomCursor />
       <ScrollProgress />
-      <Navbar onHomeClick={resetAnimations} />
+      <ProjectModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <Navbar onHomeClick={resetAnimations} onStartProject={() => setModalOpen(true)} />
       <main key={resetKey}>
         <Hero />
         <WhatWeBuild />
@@ -58,7 +61,7 @@ export default function App() {
         <CaseStudies />
         <Stats />
         <WhyCWDevs />
-        <CTA />
+        <CTA onStartProject={() => setModalOpen(true)} />
         <LogoTicker />
       </main>
       <Footer />

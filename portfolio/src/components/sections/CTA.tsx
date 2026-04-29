@@ -16,7 +16,7 @@ const PARTICLES = [
   { left: '55%',  top: '45%',  dx:  '40px', dy:  '50px', delay: '0.3s',  dur: '5s'   },
 ]
 
-export default function CTA() {
+export default function CTA({ onStartProject }: { onStartProject?: () => void }) {
   const sectionRef  = useRef<HTMLElement>(null)
   const orbRef      = useRef<HTMLDivElement>(null)
   const glowRef     = useRef<HTMLDivElement>(null)
@@ -180,7 +180,7 @@ export default function CTA() {
         </h2>
 
         <div className="cta-buttons flex flex-wrap justify-center gap-4">
-          <Button href="#contact">Start a Project</Button>
+          <Button onClick={onStartProject}>Start a Project</Button>
         </div>
       </div>
     </section>

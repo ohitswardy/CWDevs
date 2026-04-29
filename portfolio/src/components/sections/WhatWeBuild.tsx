@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 import { Globe, ShoppingCart, Building2, HeartPulse, CalendarClock, Cloud } from 'lucide-react'
 
 const systems = [
@@ -149,8 +148,7 @@ export default function WhatWeBuild() {
 
       <div className="max-w-site mx-auto">
         <div className="text-center mb-16">
-          <SectionLabel>What We Build</SectionLabel>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mt-6 mb-6 overflow-hidden">
+<h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 overflow-hidden">
             <span className="build-heading-word inline-block">One</span>{' '}
             <span className="build-heading-word inline-block">Partner.</span>{' '}
             <span className="build-heading-word inline-block">Every</span>{' '}

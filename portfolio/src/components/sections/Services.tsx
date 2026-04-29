@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 
 const services = [
   {
@@ -166,8 +165,7 @@ export default function Services() {
     <section ref={sectionRef} className="relative py-32 section-padding overflow-hidden" id="services">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-20">
-          <SectionLabel>Services</SectionLabel>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mt-6 mb-6">
+<h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
             Full-Stack. End-to-End.<br className="hidden sm:block" /> Built to Last.
           </h2>
         </div>

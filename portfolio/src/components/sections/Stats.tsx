@@ -3,10 +3,10 @@ import { gsap, ScrollTrigger } from '../../lib/gsap'
 import { Monitor, Users, Clock, Repeat } from 'lucide-react'
 
 const stats = [
-  { icon: Monitor, value: 50, suffix: '+',      label: 'Systems Delivered',      pct: 0.85 },
+  { icon: Monitor, value: 11, suffix: '+',      label: 'Systems Delivered',      pct: 0.85 },
   { icon: Users,   value: 30, suffix: '+',      label: 'SMEs Scaled',            pct: 0.65 },
-  { icon: Clock,   value: 6,  suffix: ' Weeks', label: 'Average Project Delivery', pct: 0.9  },
-  { icon: Repeat,  value: 94, suffix: '%',      label: 'Client Retention Rate',  pct: 0.94 },
+  { icon: Clock,   value: 8,  suffix: ' Weeks', label: 'Average Delivery Depending on Scope', pct: 0.9  },
+  { icon: Repeat,  value: 100, suffix: '%',      label: 'Client Retention Rate',  pct: 1 },
 ]
 
 const RING_R = 36

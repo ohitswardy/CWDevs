@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const caseStudies = [
@@ -374,8 +373,7 @@ export default function CaseStudies() {
         {/* Header row */}
         <div className="flex items-end justify-between mb-6 lg:mb-8 flex-shrink-0">
           <div>
-            <SectionLabel>Case Studies</SectionLabel>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white mt-4">
+<h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white">
               Systems We've Shipped.
             </h2>
           </div>

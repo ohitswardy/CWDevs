@@ -13,9 +13,10 @@ const navLinks = [
 
 interface NavbarProps {
   onHomeClick?: () => void
+  onStartProject?: () => void
 }
 
-export default function Navbar({ onHomeClick }: NavbarProps) {
+export default function Navbar({ onHomeClick, onStartProject }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
@@ -80,13 +81,13 @@ export default function Navbar({ onHomeClick }: NavbarProps) {
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* Desktop CTA */}
-            <a
-              href="#contact"
+            <button
+              onClick={onStartProject}
               className="hidden md:inline-flex items-center px-6 py-2.5 border border-cw-accent text-cw-accent text-xs font-display font-semibold tracking-widest uppercase rounded-sm hover:bg-cw-accent hover:text-cw-black transition-all duration-300"
               data-cursor-hover
             >
               Start a Project
-            </a>
+            </button>
 
             {/* Mobile Toggle */}
             <button
@@ -119,13 +120,12 @@ export default function Navbar({ onHomeClick }: NavbarProps) {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
+          <button
             className="mt-4 px-8 py-3 border border-cw-accent text-cw-accent font-display font-semibold tracking-widest uppercase text-sm rounded-sm"
-            onClick={() => setMobileOpen(false)}
+            onClick={() => { setMobileOpen(false); onStartProject?.() }}
           >
             Start a Project
-          </a>
+          </button>
         </div>
       )}
     </>

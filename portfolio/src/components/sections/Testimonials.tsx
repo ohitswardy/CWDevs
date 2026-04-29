@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 import { Star } from 'lucide-react'
 
 const testimonials = [
@@ -122,8 +121,7 @@ export default function Testimonials() {
 
       <div className="max-w-site mx-auto relative z-10">
         <div className="text-center mb-16">
-          <SectionLabel>Testimonials</SectionLabel>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mt-6">
+<h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white">
             What Our Clients Say.
           </h2>
         </div>

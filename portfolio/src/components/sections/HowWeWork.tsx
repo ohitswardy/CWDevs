@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 import { Search, LayoutDashboard, Settings, FlaskConical, Rocket } from 'lucide-react'
 
 const steps = [
@@ -136,8 +135,7 @@ export default function HowWeWork() {
     <section ref={sectionRef} className="relative py-32 section-padding bg-cw-dark overflow-hidden" id="process">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-20">
-          <SectionLabel>Our Process</SectionLabel>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mt-6 mb-6">
+<h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
             Our Process.<br className="hidden sm:block" /> Your Peace of Mind.
           </h2>
         </div>

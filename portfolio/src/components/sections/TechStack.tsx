@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap, ScrollTrigger } from '../../lib/gsap'
-import SectionLabel from '../ui/SectionLabel'
 
 const categories = [
   {
@@ -100,8 +99,7 @@ export default function TechStack() {
 
       <div className="max-w-site mx-auto">
         <div className="text-center mb-16">
-          <SectionLabel>Tech Stack</SectionLabel>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mt-6 mb-6">
+<h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
             Built With What Works.
           </h2>
         </div>
