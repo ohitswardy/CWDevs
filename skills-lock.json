@@ -5,6 +5,12 @@
       "source": "delphi-ai/animate-skill",
       "sourceType": "github",
       "computedHash": "6cad510ef13753d01be3a463870bfa040e2ee4ddd8f2c1606ce75112a524dfc7"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "441959d529b322bd316061e60445eed64554952561617dd5d2af22eac71b34f9"
     }
   }
 }

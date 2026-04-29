@@ -76,7 +76,7 @@ export default function Stats() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-32 section-padding">
+    <section ref={sectionRef} className="relative py-32 section-padding overflow-hidden">
       <div className="max-w-site mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => {

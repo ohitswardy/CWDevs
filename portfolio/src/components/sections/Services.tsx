@@ -163,7 +163,7 @@ export default function Services() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-32 section-padding" id="services">
+    <section ref={sectionRef} className="relative py-32 section-padding overflow-hidden" id="services">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-20">
           <SectionLabel>Services</SectionLabel>

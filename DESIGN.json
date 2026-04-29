@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-29T00:00:00.000Z",
+  "title": "Design System: CW Devs",
+  "extensions": {
+    "colorMeta": {
+      "charged-cyan": {
+        "role": "primary",
+        "displayName": "Charged Cyan",
+        "canonical": "#00E5FF",
+        "tonalRamp": ["#001a1f", "#003340", "#004d61", "#006680", "#0099bf", "#00b8e6", "#00d4f5", "#00E5FF", "#33ecff", "#99f5ff"]
+      },
+      "deep-signal-violet": {
+        "role": "secondary",
+        "displayName": "Deep Signal Violet",
+        "canonical": "#7B61FF",
+        "tonalRamp": ["#0d0a1f", "#1a1440", "#271e61", "#342880", "#5140bf", "#6650e6", "#7B61FF", "#9980ff", "#bbaaff", "#ddd5ff"]
+      },
+      "alert-coral": {
+        "role": "tertiary",
+        "displayName": "Alert Coral",
+        "canonical": "#FF4D6A",
+        "tonalRamp": ["#1f0a0d", "#40141a", "#611e27", "#802834", "#bf3d4e", "#e64560", "#FF4D6A", "#ff7389", "#ffaab8", "#ffd5db"]
+      },
+      "near-void": {
+        "role": "neutral-bg",
+        "displayName": "Near Void",
+        "canonical": "#080A0F",
+        "tonalRamp": ["#080A0F", "#0c0e14", "#101318", "#14181f", "#1a1f29", "#222a38", "#2e3a4f", "#3d4d68", "#5a6d8a", "#8fa0b8"]
+      },
+      "deep-slate": {
+        "role": "neutral-bg-alt",
+        "displayName": "Deep Slate",
+        "canonical": "#0E1118",
+        "tonalRamp": ["#0e1118", "#12161e", "#171c25", "#1c222d", "#232b38", "#2c3545", "#384255", "#465268", "#5e6e87", "#8899b0"]
+      },
+      "lifted-slate": {
+        "role": "surface",
+        "displayName": "Lifted Slate",
+        "canonical": "#141820",
+        "tonalRamp": ["#141820", "#191e28", "#1e2430", "#232a38", "#2b3344", "#353f52", "#424f66", "#536079", "#6e7d96", "#96a5ba"]
+      },
+      "structural-line": {
+        "role": "border",
+        "displayName": "Structural Line",
+        "canonical": "#1E2533",
+        "tonalRamp": ["#1e2533", "#242d3d", "#2b3547", "#333f54", "#3e4d65", "#4d5e78", "#5e7090", "#7589a6", "#99adc2", "#bfccd8"]
+      },
+      "cold-white": {
+        "role": "text-primary",
+        "displayName": "Cold White",
+        "canonical": "#E8EDF5",
+        "tonalRamp": ["#3a4252", "#4d5870", "#636e8a", "#7d8ba0", "#99a5b8", "#b5bece", "#cdd4df", "#dde3ec", "#E8EDF5", "#f4f6fa"]
+      },
+      "steel-fog": {
+        "role": "text-secondary",
+        "displayName": "Steel Fog",
+        "canonical": "#6B7A99",
+        "tonalRamp": ["#1a1e26", "#22293a", "#2c354d", "#384261", "#475475", "#576687", "#6B7A99", "#8693ad", "#aab3c5", "#cdd3de"]
+      },
+      "pure-white": {
+        "role": "text-emphasis",
+        "displayName": "Pure White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#3d4455", "#545d72", "#6b768e", "#8390a8", "#a0abc0", "#bcc4d4", "#d4dae5", "#e8ecf3", "#f4f6fa", "#FFFFFF"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines and major section anchors. One per major scroll section." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, case study titles, service names." },
+      "title": { "displayName": "Title", "purpose": "Card headings, feature labels, sub-section titles." },
+      "body": { "displayName": "Body", "purpose": "All prose. Max 65ch line length." },
+      "label": { "displayName": "Label / Mono", "purpose": "Tech stack tags, system identifiers, process step codes, nav secondary labels. Always JetBrains Mono, uppercase." }
+    },
+    "shadows": [
+      {
+        "name": "cyan-ambient-hover",
+        "value": "0 0 20px rgba(0, 229, 255, 0.15)",
+        "purpose": "Card hover, button hover, active nav items. Glow toward user — not lift."
+      },
+      {
+        "name": "cyan-focus-ring",
+        "value": "0 0 0 4px rgba(0, 229, 255, 0.2)",
+        "purpose": "Focus rings on all interactive elements. WCAG AAA. Never thinner."
+      },
+      {
+        "name": "violet-ambient-hero",
+        "value": "0 0 40px rgba(123, 97, 255, 0.12)",
+        "purpose": "Hero orb and ambient background elements only. Never on UI components."
+      },
+      {
+        "name": "coral-error-glow",
+        "value": "0 0 12px rgba(255, 77, 106, 0.2)",
+        "purpose": "Error state emphasis on form fields with Alert Coral border."
+      }
+    ],
+    "motion": [
+      { "name": "ease-out-quint", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default easing for all UI state transitions — hover, focus, active." },
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Entrance animations — elements arriving into viewport." },
+      { "name": "ease-in-out-cubic", "value": "cubic-bezier(0.645, 0.045, 0.355, 1)", "purpose": "Continuous loops — shimmer, float, gradient-shift. Not for one-shot transitions." },
+      { "name": "duration-fast", "value": "150ms", "purpose": "Button state changes, hover glows." },
+      { "name": "duration-standard", "value": "300ms", "purpose": "Card entrances, section reveals, focus transitions." },
+      { "name": "duration-slow", "value": "600ms", "purpose": "Page-level entrance animations, hero word reveals." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1440px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary CTA. Charged Cyan fill on Near Void text. Used once per viewport section.",
+      "html": "<button class=\"ds-btn-primary\">GET STARTED</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #00E5FF; color: #080A0F; padding: 14px 32px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.01em; border: none; border-radius: 4px; cursor: pointer; transition: background 150ms cubic-bezier(0.23, 1, 0.32, 1), color 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:hover { background: #FFFFFF; color: #080A0F; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.2); } .ds-btn-primary:active { background: #33ecff; } .ds-btn-primary:disabled { background: #1E2533; color: #6B7A99; cursor: not-allowed; box-shadow: none; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary CTA. Transparent with Structural Line border. Used for nav actions and secondary choices.",
+      "html": "<button class=\"ds-btn-ghost\">VIEW WORK</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #E8EDF5; padding: 13px 31px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.01em; border: 1px solid #1E2533; border-radius: 4px; cursor: pointer; transition: background 150ms cubic-bezier(0.23, 1, 0.32, 1), color 150ms cubic-bezier(0.23, 1, 0.32, 1), border-color 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-ghost:hover { background: #141820; color: #00E5FF; border-color: #00E5FF; } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.2); } .ds-btn-ghost:active { background: #1E2533; }"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Standard content card. Lifted Slate background, 1px Structural Line border. Glows on hover when interactive.",
+      "html": "<div class=\"ds-card\"><span class=\"ds-card-label\">POS SYSTEM</span><h3 class=\"ds-card-title\">Retail Point of Sale</h3><p class=\"ds-card-body\">End-to-end sales and inventory management built for multi-branch retail.</p></div>",
+      "css": ".ds-card { background: #141820; border: 1px solid #1E2533; border-radius: 8px; padding: 24px; transition: box-shadow 150ms cubic-bezier(0.23, 1, 0.32, 1), border-color 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-card:hover { box-shadow: 0 0 20px rgba(0, 229, 255, 0.15); border-color: rgba(0, 229, 255, 0.25); } .ds-card-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6B7A99; margin-bottom: 10px; } .ds-card-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; color: #E8EDF5; letter-spacing: -0.01em; line-height: 1.3; margin: 0 0 10px 0; } .ds-card-body { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.9375rem; color: #6B7A99; line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Tech Chip",
+      "kind": "chip",
+      "refersTo": "chip-tech",
+      "description": "Technology stack tag and filter chip. Mono font, pill shape. Active state fills with Charged Cyan.",
+      "html": "<div class=\"ds-chips\"><span class=\"ds-chip\">REACT</span><span class=\"ds-chip ds-chip--active\">TYPESCRIPT</span><span class=\"ds-chip\">NODE.JS</span></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip { display: inline-flex; align-items: center; background: #1E2533; color: #6B7A99; font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 9999px; border: 1px solid transparent; transition: background 150ms cubic-bezier(0.23, 1, 0.32, 1), color 150ms cubic-bezier(0.23, 1, 0.32, 1); cursor: default; } .ds-chip:hover { background: #2b3445; color: #E8EDF5; } .ds-chip--active { background: #00E5FF; color: #080A0F; border-color: #00E5FF; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": null,
+      "description": "Form text field. Deep Slate background, Structural Line border. Cyan border + focus ring on focus. Error state uses Alert Coral.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-input-name\">FULL NAME</label><input class=\"ds-input\" id=\"ds-input-name\" type=\"text\" placeholder=\"e.g. Maria Santos\"></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; } .ds-label { font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7A99; } .ds-input { background: #0E1118; border: 1px solid #1E2533; border-radius: 8px; padding: 14px 16px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 1rem; color: #E8EDF5; outline: none; transition: border-color 150ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-input::placeholder { color: #6B7A99; } .ds-input:focus { border-color: #00E5FF; box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.2); } .ds-input--error { border-color: #FF4D6A; box-shadow: 0 0 12px rgba(255, 77, 106, 0.2); } .ds-input:disabled { background: #080A0F; color: #6B7A99; cursor: not-allowed; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Fixed top navigation. Near Void background, Structural Line bottom border. Logo + anchor links + primary CTA.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"/\"><span class=\"ds-nav-logo-cw\">CW</span><span class=\"ds-nav-logo-devs\">Devs</span></a><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#services\">Services</a><a class=\"ds-nav-link\" href=\"#work\">Work</a><a class=\"ds-nav-link\" href=\"#process\">Process</a><a class=\"ds-nav-link\" href=\"#about\">About</a></div><button class=\"ds-btn-primary ds-nav-cta\">Get Started</button></nav>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; background: #080A0F; border-bottom: 1px solid #1E2533; } .ds-nav-logo { display: flex; align-items: center; gap: 2px; text-decoration: none; } .ds-nav-logo-cw { font-family: 'JetBrains Mono', monospace; font-size: 1.125rem; font-weight: 700; color: #00E5FF; } .ds-nav-logo-devs { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.125rem; font-weight: 700; color: #FFFFFF; } .ds-nav-links { display: flex; align-items: center; gap: 32px; } .ds-nav-link { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; color: #E8EDF5; text-decoration: none; transition: color 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-nav-link:hover, .ds-nav-link.active { color: #00E5FF; } .ds-nav-cta { padding: 10px 24px; font-size: 0.875rem; }"
+    },
+    {
+      "name": "Floating System Card",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Hero section deliverable cards. Parallax-driven. Represents client system outputs — the first proof point of real work.",
+      "html": "<div class=\"ds-float-card\"><span class=\"ds-float-card-type\">ERP MODULE</span><div class=\"ds-float-card-title\">Inventory Control</div><div class=\"ds-float-card-meta\"><span class=\"ds-float-card-dot\"></span><span class=\"ds-float-card-status\">Live in production</span></div></div>",
+      "css": ".ds-float-card { background: #141820; border: 1px solid #1E2533; border-radius: 8px; padding: 18px 20px; min-width: 180px; max-width: 220px; transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), border-color 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-float-card:hover { box-shadow: 0 0 20px rgba(0, 229, 255, 0.15); border-color: rgba(0, 229, 255, 0.3); } .ds-float-card-type { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.625rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6B7A99; margin-bottom: 8px; } .ds-float-card-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; color: #E8EDF5; letter-spacing: -0.01em; margin-bottom: 12px; } .ds-float-card-meta { display: flex; align-items: center; gap: 6px; } .ds-float-card-dot { width: 6px; height: 6px; border-radius: 50%; background: #00E5FF; box-shadow: 0 0 6px rgba(0, 229, 255, 0.6); flex-shrink: 0; } .ds-float-card-status { font-family: 'JetBrains Mono', monospace; font-size: 0.625rem; font-weight: 400; letter-spacing: 0.06em; color: #6B7A99; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Precision Engine",
+    "overview": "CW Devs is a digital systems engineering firm — and the design system is the proof. Every surface conveys engineered exactness: tight spacing, high-contrast type, restrained color use that makes the accent matter. Nothing is soft. Nothing is accidental. The system is dark by necessity — the audience is evaluating capability on a screen, often after hours, making a real business decision. The darkness creates focus; the cyan accent creates conviction.\n\nThis is not a design system that decorates. It does not reach for warmth or approachability. It reaches for credibility. SME founders and decision-makers arrive skeptical. They want to see that CW Devs has done the hard work before they hire them. The precision of the interface is the first proof point. A misaligned margin is a credibility risk. A weak CTA is a lost client.\n\nThe system explicitly rejects: sloppy spacing, soft neutrals, passive copy, generically modern layouts, motion that runs for its own sake, gradient text as decoration, side-stripe border accents, and anything that reads as uncertain of itself.",
+    "keyCharacteristics": [
+      "Near-void dark backgrounds with controlled surface layering",
+      "Single charged-cyan accent used sparingly — its rarity is the point",
+      "Space Grotesk display type with aggressive negative tracking",
+      "JetBrains Mono for all technical labels, codes, and tags",
+      "Glow-based depth: flat at rest, illuminated on interaction",
+      "Motion serves the argument — not the animator's ego",
+      "WCAG AAA contrast throughout; reduced motion respected system-wide"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Charged Cyan is the only accent on a given screen at rest. Deep Signal Violet appears only inside gradients with Cyan — never solo. Alert Coral is a warning system, not a brand color. One voice. One direction.", "section": "colors" },
+      { "name": "The No Decorative Gradient Rule", "body": "background-clip: text with any gradient is prohibited. Gradient text is decorative, never meaningful. Use Charged Cyan solid for emphasis; use weight and scale for hierarchy.", "section": "colors" },
+      { "name": "The Territory Rule", "body": "Space Grotesk owns headings. DM Sans owns body. JetBrains Mono owns anything with a technical designation. No font crosses into another's territory.", "section": "typography" },
+      { "name": "The Tight Crown Rule", "body": "Display and Headline type always tracks negative. Loose tracking on large type reads as uncertain. At display scale, -0.02em is the minimum commitment.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No surface carries a shadow at rest. Hover glows and focus rings are state — not decoration. A glowing card that isn't interactive is a lie.", "section": "elevation" },
+      { "name": "The Single Source Rule", "body": "Glow color matches the accent that the element is affiliated with. A cyan CTA glows cyan. A destructive action glows coral. No element glows with a color it doesn't contain.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Charged Cyan for one primary CTA per viewport — its scarcity is its power.",
+      "Do use JetBrains Mono for every technical label, system name, stack identifier, and process code.",
+      "Do track display and headline type negatively: -0.02em on Display, -0.015em on Headline.",
+      "Do respect prefers-reduced-motion. Every GSAP and Framer Motion animation must check the media query.",
+      "Do maintain 7:1 contrast for body text and 4.5:1 for large text (WCAG AAA).",
+      "Do use tonal steps (Near Void → Deep Slate → Lifted Slate) to create depth.",
+      "Do cap body text at 65ch.",
+      "Do use focus rings on every interactive element: 4px Cyan pulse ring, offset 2px.",
+      "Do keep motion purposeful — it must direct attention, reveal structure, or build confidence."
+    ],
+    "donts": [
+      "Don't use background-clip: text with gradients — gradient text is prohibited.",
+      "Don't use border-left or border-right greater than 1px as a colored stripe accent.",
+      "Don't be sloppy — misaligned elements and inconsistent padding are credibility failures.",
+      "Don't be weak — soft palettes, passive copy, and excessive whitespace without tension read as uncertainty.",
+      "Don't use generic dev agency clichés: rocket emojis, 'let's build something amazing together,' identical icon-grid service cards.",
+      "Don't animate for its own sake — motion that doesn't serve the visitor's decision is decorative.",
+      "Don't use enterprise gray — cold corporate neutrals with no edge or conviction.",
+      "Don't use Alert Coral for anything except errors, destructive actions, and high-urgency states.",
+      "Don't use Deep Signal Violet as a standalone fill — gradients with Cyan only.",
+      "Don't nest cards — restructure with sections or lists.",
+      "Don't use placeholder text as a field label.",
+      "Don't introduce a fourth typeface — the three-font system covers every territory."
+    ]
+  }
+}

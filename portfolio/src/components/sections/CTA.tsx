@@ -179,13 +179,8 @@ export default function CTA() {
           ))}
         </h2>
 
-        <p className="cta-sub text-lg text-cw-muted max-w-xl mx-auto mb-10">
-          Tell us about your business. We'll design the system around it.
-        </p>
-
         <div className="cta-buttons flex flex-wrap justify-center gap-4">
           <Button href="#contact">Start a Project</Button>
-          <Button variant="outline" href="#contact">Schedule a Discovery Call</Button>
         </div>
       </div>
     </section>

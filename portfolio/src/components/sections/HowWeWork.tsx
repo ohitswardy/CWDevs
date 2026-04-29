@@ -133,7 +133,7 @@ export default function HowWeWork() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-32 section-padding bg-cw-dark" id="process">
+    <section ref={sectionRef} className="relative py-32 section-padding bg-cw-dark overflow-hidden" id="process">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-20">
           <SectionLabel>Our Process</SectionLabel>

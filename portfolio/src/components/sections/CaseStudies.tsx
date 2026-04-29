@@ -400,7 +400,7 @@ export default function CaseStudies() {
         </div>
 
         {/* Main card area */}
-        <div className="flex-1 relative overflow-hidden" style={{ perspective: '1400px' }}>
+        <div className="flex-1 relative overflow-hidden min-h-[500px] lg:min-h-0" style={{ perspective: '1400px' }}>
           <MotionConfig transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
             <AnimatePresence mode="wait" initial={false} custom={direction}>
               <motion.div
@@ -425,7 +425,7 @@ export default function CaseStudies() {
 
                 {/* Right — Content */}
                 <motion.div
-                  className="flex flex-col justify-center gap-5"
+                  className="flex flex-col justify-start lg:justify-center gap-5"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"

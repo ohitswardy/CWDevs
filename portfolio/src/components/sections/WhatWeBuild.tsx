@@ -145,7 +145,6 @@ export default function WhatWeBuild() {
     <section ref={sectionRef} className="relative py-32 section-padding overflow-hidden" id="about">
       {/* Ambient floating shapes */}
       <div className="build-accent absolute top-20 right-[5%] w-32 h-32 rounded-full border border-cw-accent/5 pointer-events-none" />
-      <div className="build-accent absolute bottom-32 left-[3%] w-20 h-20 rounded-full border border-cw-accent-2/8 pointer-events-none" style={{ animationDelay: '1.2s' }} />
       <div className="build-accent absolute top-1/2 right-[12%] w-10 h-10 rotate-45 border border-cw-accent-3/10 pointer-events-none" style={{ animationDelay: '2.4s' }} />
 
       <div className="max-w-site mx-auto">

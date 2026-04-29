@@ -3,6 +3,7 @@ import { gsap } from '../../lib/gsap'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
+  { label: 'Home', href: '#' },
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },
@@ -10,7 +11,11 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar() {
+interface NavbarProps {
+  onHomeClick?: () => void
+}
+
+export default function Navbar({ onHomeClick }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
@@ -40,33 +45,58 @@ export default function Navbar() {
       <nav
         ref={navRef}
         className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
-          scrolled ? 'bg-cw-black/80 backdrop-blur-xl border-b border-cw-border/50' : 'bg-transparent'
+          scrolled
+            ? 'bg-cw-black/90 md:bg-cw-black/80 md:backdrop-blur-xl border-b border-cw-border/50'
+            : 'bg-cw-black/70 md:bg-transparent'
         }`}
       >
         <div className="max-w-site mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-0.5" data-cursor-hover>
+          {/* Logo / Home */}
+          <a
+            href="#"
+            className="flex items-center gap-0.5"
+            data-cursor-hover
+            onClick={(e) => { e.preventDefault(); onHomeClick?.() }}
+          >
             <span className="font-mono text-2xl font-bold text-cw-accent">CW</span>
             <span className="font-display text-2xl font-bold text-white">Devs</span>
           </a>
 
-          {/* Desktop CTA */}
-          <a
-            href="#contact"
-            className="hidden md:inline-flex items-center px-6 py-2.5 border border-cw-accent text-cw-accent text-xs font-display font-semibold tracking-widest uppercase rounded-sm hover:bg-cw-accent hover:text-cw-black transition-all duration-300"
-            data-cursor-hover
-          >
-            Start a Project
-          </a>
+          {/* Desktop Nav Links */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-display text-xs font-medium tracking-widest uppercase text-cw-text hover:text-white transition-colors duration-200"
+                data-cursor-hover
+                onClick={link.href === '#' ? (e) => { e.preventDefault(); onHomeClick?.() } : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-          {/* Mobile Toggle */}
-          <button
-            className="md:hidden text-cw-text"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right side */}
+          <div className="flex items-center gap-4">
+            {/* Desktop CTA */}
+            <a
+              href="#contact"
+              className="hidden md:inline-flex items-center px-6 py-2.5 border border-cw-accent text-cw-accent text-xs font-display font-semibold tracking-widest uppercase rounded-sm hover:bg-cw-accent hover:text-cw-black transition-all duration-300"
+              data-cursor-hover
+            >
+              Start a Project
+            </a>
+
+            {/* Mobile Toggle */}
+            <button
+              className="md:hidden text-cw-text"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -76,6 +106,19 @@ export default function Navbar() {
           ref={mobileMenuRef}
           className="fixed inset-0 z-[99] bg-cw-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
         >
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-display text-2xl font-semibold tracking-widest uppercase text-white hover:text-cw-accent transition-colors duration-200"
+              onClick={() => {
+                setMobileOpen(false)
+                if (link.href === '#') onHomeClick?.()
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             href="#contact"
             className="mt-4 px-8 py-3 border border-cw-accent text-cw-accent font-display font-semibold tracking-widest uppercase text-sm rounded-sm"

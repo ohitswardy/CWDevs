@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react'
-import { gsap, ScrollTrigger } from '../../lib/gsap'
+import { gsap } from '../../lib/gsap'
 import Button from '../ui/Button'
 import { Star } from 'lucide-react'
 
@@ -211,7 +211,6 @@ export default function Hero() {
 
     return () => {
       ctx.revert()
-      ScrollTrigger.getAll().forEach(t => t.kill())
       section.removeEventListener('mousemove', handleMouseMove)
       section.removeEventListener('mouseenter', handleMouseEnter)
       section.removeEventListener('mouseleave', handleMouseLeave)
